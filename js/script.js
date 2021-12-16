@@ -53,7 +53,7 @@ const DomElement = function (selector, height, width, bg, fontSize, text) {
 	this.createElement = () => {
 		if (this.selector[0] === ".") {
 			this.newElement = document.createElement("div");
-			this.newElement.classList.add(this.selector);
+			this.newElement.classList.add(this.selector.slice(1));
 			this.newElement.style.cssText = `height: ${this.height}; width: ${this.width}; background: ${this.bg}; font-size: ${this.fontSize};`;
 			this.newElement.style.position = "absolute";
 			this.newElement.textContent = this.text;
@@ -61,7 +61,7 @@ const DomElement = function (selector, height, width, bg, fontSize, text) {
 			// console.log(this.newElement);
 		} else if (this.selector[0] === "#") {
 			this.newElement = document.createElement("p");
-			this.newElement.classList.add(this.selector);
+			this.newElement.classList.add(this.selector.slice(1));
 			this.newElement.style.cssText = `height: ${this.height}; width: ${this.width}; background: ${this.bg}; font-size: ${this.fontSize};`;
 			this.newElement.textContent = this.text;
 			document.body.append(this.newElement);
