@@ -59,6 +59,7 @@ document.addEventListener(
 					this.newElement.classList.add(this.selector.slice(1));
 					this.newElement.style.cssText = `height: ${this.height}; width: ${this.width}; background: ${this.bg}; font-size: ${this.fontSize};`;
 					this.newElement.style.position = "absolute";
+					this.newElement.style.borderRadius = "10px";
 					this.newElement.textContent = this.text;
 					document.body.append(this.newElement);
 					// console.log(this.newElement);
@@ -82,7 +83,7 @@ document.addEventListener(
 		const newDivComplex = new DomElement(".class", "100px", "100px", "MediumAquamarine", "20px", "Object");
 		newDivComplex.createElement();
 
-		newDivComplex.newElement.style.top = "0px";
+		newDivComplex.newElement.style.top = "50px";
 		newDivComplex.newElement.style.left = "0px";
 	},
 	false
