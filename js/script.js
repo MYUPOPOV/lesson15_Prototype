@@ -42,7 +42,7 @@ document.addEventListener(
 
 		const goLeft = () => {
 			let positionX = newDivComplex.newElement.style.left;
-			if (parseInt(positionX) > 0) {
+			if (parseInt(positionX) > 5) {
 				positionX = parseInt(positionX) - 10;
 				newDivComplex.newElement.style.left = positionX + "px";
 			}
