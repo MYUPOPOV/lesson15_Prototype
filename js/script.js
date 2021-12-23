@@ -22,8 +22,10 @@ document.addEventListener(
 
 		const goUp = () => {
 			let positionY = newDivComplex.newElement.style.top;
-			positionY = parseInt(positionY) - 10;
-			newDivComplex.newElement.style.top = positionY + "px";
+			if (parseInt(positionY) > 30) {
+				positionY = parseInt(positionY) - 10;
+				newDivComplex.newElement.style.top = positionY + "px";
+			}
 		};
 
 		const goDown = () => {
@@ -40,8 +42,10 @@ document.addEventListener(
 
 		const goLeft = () => {
 			let positionX = newDivComplex.newElement.style.left;
-			positionX = parseInt(positionX) - 10;
-			newDivComplex.newElement.style.left = positionX + "px";
+			if (parseInt(positionX) > 0) {
+				positionX = parseInt(positionX) - 10;
+				newDivComplex.newElement.style.left = positionX + "px";
+			}
 		};
 
 		const DomElement = function (selector, height, width, bg, fontSize, text) {
